@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="py-4 px-8 sm:px-16 flex justify-between fixed w-full">
+    <div className="py-4 px-8 sm:px-16 flex justify-between items-center fixed w-full">
       <div className="logo text-lg font-serif ">
         <NavLink to="/">
 
