@@ -3,7 +3,7 @@ import React from "react";
 const MainHero = () => {
   return (
     <div
-      className="w-screen container pt-10 flex
+      className="w-screen container h-screen pb-10 pt-10 flex
     flex-col justify-between"
     >
       <div className="flex w-full pt-20 justify-end">
@@ -13,7 +13,7 @@ const MainHero = () => {
       </div>
       <div className="flex mt-36 items-end">
         <div className="flex items-end">
-          <h1 className="font-serif leading-none text-[1500%]">
+          <h1 className="font-serif leading-none text-[800%] sm:text-[1000%] lg:text-[1500%]">
             <em>lilli</em>an.
           </h1>
         </div>

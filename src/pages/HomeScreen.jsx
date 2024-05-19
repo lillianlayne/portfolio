@@ -17,11 +17,6 @@ const HomeScreen = () => {
   return (
     <div>
       <MainHero />
-      {projects ? (
-        <FeaturedSlideshow projects={projects} />
-      ) : (
-        <div>loading</div>
-      )}
     </div>
   );
 };

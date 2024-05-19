@@ -5,10 +5,8 @@ import HomeScreen from './pages/HomeScreen'
 import Nav from './components/Nav'
 import LoginScreen from './pages/LoginScreen'
 import AdminScreen from './pages/AdminScreen'
+import AboutScreen from '../pages/AboutScreen'
 import { CheckSession } from './services/auth'
-import AboutScreen from './pages/AboutScreen'
-import SelectedScreen from './pages/SelectedScreen'
-import CastStudeisScreen from './pages/CastStudeisScreen'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -34,9 +32,6 @@ function App() {
         <Route path='/login' element={<LoginScreen setUser={setUser} />}/>
         <Route path='/admin' element={<AdminScreen />}/>
         <Route path='/about' element={<AboutScreen />}/>
-        <Route path='/selectedworks' element={<SelectedScreen />}/>
-        <Route path='/casestudies' element={<CastStudeisScreen />}/>
-
       </Routes>
     </main>
    </div>
