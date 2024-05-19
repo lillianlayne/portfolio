@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* monotype grotesque */
+  @font-face {
+    font-family: monotype-grotesque, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://use.typekit.net/jha0eme.css");
+  }
+
+  @font-face {
+    font-family: monotype-grotesque, sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    src: url("https://use.typekit.net/jha0eme.css");
+  }
+
+  @font-face {
+    font-family: monotype-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://use.typekit.net/jha0eme.css");
+  }
+
+  @font-face {
+    font-family: monotype-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    src: url("https://use.typekit.net/jha0eme.css");
+  }
+
+  /* swear display */
+  @font-face {
+    font-family: swear-display, serif;
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://use.typekit.net/jha0eme.css");
+  }
+  
+  @font-face {
+    font-family: swear-display, serif;
+    font-weight: 400;
+    font-style: italic;
+    src: url("https://use.typekit.net/jha0eme.css");
+  }
+}
+
+body {
+  @apply bg-stone-200 text-stone-800
+}
