@@ -9,6 +9,7 @@ import { CheckSession } from './services/auth'
 import AboutScreen from './pages/AboutScreen'
 import SelectedScreen from './pages/SelectedScreen'
 import CastStudeisScreen from './pages/CastStudeisScreen'
+import ProjectTemplate from './pages/ProjectTemplate'
 
 function App() {
   const [user, setUser] = useState(null)
@@ -26,7 +27,7 @@ function App() {
   }, [])
 
   return (
-   <div className="App">
+   <div className="App bg-stone-900 text-stone-100">
     <Nav />
     <main>
       <Routes>
@@ -36,6 +37,7 @@ function App() {
         <Route path='/about' element={<AboutScreen />}/>
         <Route path='/selectedworks' element={<SelectedScreen />}/>
         <Route path='/casestudies' element={<CastStudeisScreen />}/>
+        <Route path='/project/:id' element={<ProjectTemplate />}/>
 
       </Routes>
     </main>
