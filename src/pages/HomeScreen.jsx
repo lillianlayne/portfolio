@@ -7,8 +7,8 @@ import HomeAbout from "../components/HomeAbout";
 
 const HomeScreen = ({ data }) => {
   return (
-    <div>
-      <div className="h-screen flex flex-col gap-24 justify-end pb-24">
+    <div className="pt-24 md:pb-0 md:pt-0">
+      <div className="h-screen flex flex-col md:gap-24 justify-between md:justify-end md:pb-24 pb-36">
         <MainHero />
         <HomeAbout />
       </div>

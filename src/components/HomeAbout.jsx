@@ -5,7 +5,7 @@ const HomeAbout = () => {
   return (
     <div className="container flex md:flex-row flex-col gap-10 justify-between">
       <div className="flex flex-col gap-10">
-        <div className="md:w-3/4 font-thin">
+        <div className="md:w-3/4 font-thin text-sm md:text-base">
           I'm a versitile UI/UX Art Director and Front-End Developer, blending
           creative design with robust development skills. My background in art
           and marketing, combined with hands-on experience in e-commerce, allows
@@ -23,9 +23,9 @@ const HomeAbout = () => {
             <p className="border-b hidden md:flex w-full py-1 border-stone-300">
               Let's Connect
             </p>
-           <a href="www.linkedin.com/in/lillianlayne" target="_blank" >/ LinkedIn</a>
-           <a href="www.linkedin.com/in/lillianlayne" target="_blank" >/ GitHub</a>
-           <a href="www.linkedin.com/in/lillianlayne" target="_blank" >/ CodePen</a>
+           <a className="font-serif" href="www.linkedin.com/in/lillianlayne" target="_blank" >/ LinkedIn</a>
+           <a className="font-serif" href="www.linkedin.com/in/lillianlayne" target="_blank" >/ GitHub</a>
+           <a className="font-serif" href="www.linkedin.com/in/lillianlayne" target="_blank" >/ CodePen</a>
           </div>
         </div>
       </div>
