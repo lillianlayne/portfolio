@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body, html {
+  background: #1c1917
+}
+
 @layer base {
   :root {
     --background: 227, 215, 187;
