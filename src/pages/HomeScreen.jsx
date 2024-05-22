@@ -5,17 +5,17 @@ import { getProjects } from "../services/projectServices";
 import LogoCloud from "../components/LogoCloud";
 import HomeAbout from "../components/HomeAbout";
 
-const HomeScreen = ({data}) => {
-
- 
+const HomeScreen = ({ data }) => {
   return (
     <div>
-      <MainHero />
-      <HomeAbout />
+      <div className="h-screen flex flex-col gap-24 justify-end pb-24">
+        <MainHero />
+        <HomeAbout />
+      </div>
       {/* <LogoCloud /> */}
       <FeaturedSlideshow />
     </div>
-  ) 
+  );
 };
 
 export default HomeScreen;

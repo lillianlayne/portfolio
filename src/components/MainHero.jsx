@@ -2,7 +2,7 @@ import React from "react";
 
 const MainHero = () => {
   return (
-    <div className="container md:h-screen pb-24 pt-24 flex items-end">
+    <div className="container flex items-end">
       <div className="flex flex-col md:flex-row items-end gap-10">
         <h1 className="font-serif text-[100px] leading-[80%] lg:text-[200px]">
           Creative <br />
@@ -16,6 +16,7 @@ const MainHero = () => {
           </p>
         </div>
       </div>
+      
     </div>
   );
 };
