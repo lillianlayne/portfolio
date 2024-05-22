@@ -11,6 +11,7 @@ import SelectedScreen from "./pages/SelectedScreen";
 import CastStudeisScreen from "./pages/CastStudeisScreen";
 import ProjectTemplate from "./pages/ProjectTemplate";
 import projects from "./data/projects";
+import UnderConstruction from "./pages/UnderConstruction";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -28,6 +29,7 @@ function App() {
           <Route path="/selectedworks" element={<SelectedScreen />} />
           <Route path="/casestudies" element={<CastStudeisScreen />} />
           <Route path="/project/:id" element={<ProjectTemplate />} />
+          <Route path="/underconstruction" element={<UnderConstruction />} />
         </Routes>
       </main>
     </div>

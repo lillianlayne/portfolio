@@ -9,7 +9,7 @@ const FeaturedSlideshow = () => {
   return (
     <div className="flex-grow container">
       {data.map((proj) => (
-        <div className="h-[600px] md:h-screen relative" key={proj.name}>
+        <Link to={`/underconstruction`} className="h-[600px] md:h-screen relative" key={proj.name}>
           <div className="content absolute w-full z-10 transform-center flex text-center flex-col justify-center items-center">
             <Parallax speed={-10} className="flex flex-col items-center">
               <h2>{proj.name}</h2>
@@ -28,7 +28,7 @@ const FeaturedSlideshow = () => {
               />
             </div>
           </Parallax>
-        </div>
+        </Link>
       ))}
     </div>
   );
