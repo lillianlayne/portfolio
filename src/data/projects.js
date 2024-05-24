@@ -9,6 +9,8 @@ const projects = [
       position: "start",
       size: "landscape",
     },
+    year: 2022, 
+    location: 'Chattanooga, TN'
   },
   {
     name: "Salted Baked Goods",
@@ -20,6 +22,8 @@ const projects = [
       position: "start",
       size: "landscape",
     },
+    year: 2024, 
+    location: 'New York City, NY'
   },
   {
     name: "The Rizzas",
@@ -31,6 +35,8 @@ const projects = [
       position: "center",
       size: "landscape",
     },
+    year: 2023, 
+    location: 'Chattanooga, TN'
   },
   {
     name: "Cheersly",
@@ -42,6 +48,8 @@ const projects = [
       position: "end",
       size: "landscape",
     },
+    year: 2024, 
+    location: "Chattanooga, TN"
   },
 
   {
@@ -54,7 +62,10 @@ const projects = [
       position: "start",
       size: "portrait",
     },
+    year: 2021, 
+    location: 'Chattanooga, TN'
   },
+  
 
   {
     name: "Maison",
@@ -66,6 +77,8 @@ const projects = [
       position: "end",
       size: "landscape",
     },
+    year: 2023, 
+    location: 'Nashville, TN'
   },
 ];
 

@@ -12,7 +12,7 @@ const Nav = () => {
 
 
   return (
-    <div className="py-4 px-8 sm:px-16 flex justify-between backdrop-blur bg-stone-900 items-center z-50 fixed w-full">
+    <div className="py-4 px-8 sm:px-16 flex justify-between backdrop-blur bg-stone-900 items-center z-50  w-full">
       <div className="logo text-lg font-serif ">
         <NavLink to="/">
 
