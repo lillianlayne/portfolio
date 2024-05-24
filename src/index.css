@@ -71,7 +71,7 @@ body, html {
   }
 
   h2 {
-    @apply tracking-tighter font-sans text-[40px] md:text-[54px];
+    @apply tracking-tight leading-none font-serif text-[40px] md:text-[74px];
   }
 
   h3 {
@@ -105,8 +105,106 @@ body, html {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+
+  .transform-y {
+    top: 50%;
+    transform: translatey(-50%);
+  }
+
+  .aspect-3 {
+    aspect-ratio: 3 / 5;
+  }
+
+  .left-card {
+    @apply aspect-3 bg-stone-800 rounded-3xl;
+    top: 20%;
+    height: 60%;
+  }
+
+  .right-card {
+    @apply aspect-3 bg-stone-700 rounded-3xl;
+    top: 20%;
+    right: 40%;
+    height: 60%;
+    position: absolute;
+  }
+
+  .h-200 {
+    height: 200%;
+  }
+
+  .outside {
+    height: 300vh;
+    width: 100%;
+  }
+
+  .inside {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0
+
+  }
+
+  .photo-wrapper {
+    width: 50vw;
+    max-width: 600px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    grid-row-gap: 128px;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .left-wrapper {
+    align-items: start;
+  }
+
+  .right-wrapper {
+    align-items: end;
+  }
+
+  .left-photo {
+    width: 60%;
+    aspect-ratio: 3/5;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+
+  .right-photo {
+    width: 60%;
+    aspect-ratio: 3/5;
+    overflow: hidden;
+    border-radius: 32px;
+  }
+
 }
 
 .tag {
   font-size: 10px;
+}
+
+/* .left-card {
+  @apply aspect-3 bg-stone-800 rounded-3xl;
+  top: 20%;
+  left: 10%;
+  height: 60%;
+  position: absolute;
+}
+
+.right-card {
+  @apply aspect-3 bg-stone-700 rounded-3xl;
+  top: 20%;
+  right: 10%;
+  height: 60%;
+  position: absolute;
+} */
+
+body, .App {
+  scroll-behavior: smooth;
 }
