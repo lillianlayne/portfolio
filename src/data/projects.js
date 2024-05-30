@@ -1,5 +1,6 @@
 const projects = [
   {
+    id: 123,
     name: "Legacybox Backup",
     role: "Art Director & Lead Designer",
     studentProject: false,
@@ -13,6 +14,7 @@ const projects = [
     location: 'Chattanooga, TN'
   },
   {
+    id: 456,
     name: "Salted Baked Goods",
     role: "Lead Desinger & Developer",
     studentProject: false,
@@ -26,6 +28,7 @@ const projects = [
     location: 'New York City, NY'
   },
   {
+    id: 789,
     name: "The Rizzas",
     role: "Lead Designer",
     studentProject: false,
@@ -39,6 +42,7 @@ const projects = [
     location: 'Chattanooga, TN'
   },
   {
+    id: 741,
     name: "Cheersly",
     role: "Lead Designer & Developer",
     studentProject: true,
@@ -53,6 +57,7 @@ const projects = [
   },
 
   {
+    id: 963,
     name: "Legacybox Photobox",
     role: "Art Director & Lead Designer",
     studentProject: false,
@@ -68,6 +73,7 @@ const projects = [
   
 
   {
+    id: 852,
     name: "Maison",
     role: "Lead Designer",
     studentProject: false,

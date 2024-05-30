@@ -1,18 +1,20 @@
-import React, {useState} from "react";
+import React, {useEffect, useState, useRef} from "react";
 import { NavLink } from "react-router-dom";
 import { IoSunny, IoMoon } from "react-icons/io5";
 
-const Nav = () => {
-  const [dark, setDark] = React.useState(false);
+const Nav = ({scrolling}) => {
+  
+  let navStyle;
+  if (scrolling) {
+    navStyle = "fixed py-4 px-8 sm:px-16 flex justify-between transform-top backdrop-blur bg-stone-900 items-center z-50 transition-all w-full"
+  } else {
+    navStyle = "fixed transform-top py-4 px-8 sm:px-16 flex justify-between backdrop-blur bg-stone-900 items-center z-50 transition-all w-full invisible"
+  }
 
-    const darkModeHandler = () => {
-        setDark(!dark);
-        document.body.classList.toggle("dark");
-    }
 
 
   return (
-    <div className="py-4 px-8 sm:px-16 flex justify-between backdrop-blur bg-stone-900 items-center z-50  w-full">
+    <div className={navStyle}>
       <div className="logo text-lg font-serif ">
         <NavLink to="/">
 
@@ -29,15 +31,7 @@ const Nav = () => {
         <NavLink to="/about">
           <h6 className="font-thin hover:italic">about</h6>
         </NavLink>
-        <button onClick={()=> darkModeHandler()}>
-      {
-          
-          dark && <IoSunny /> // render sunny when dark is true
-      }
-      {
-          !dark && <IoMoon /> // render moon when dark is false
-      }
- </button>
+ 
       </div>
     </div>
   );
