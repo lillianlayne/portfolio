@@ -1,8 +1,10 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import projects from "../data/projects";
 
+
 const SliderBox = ({ data, idx }) => {
+  let navigate = useNavigate()
   const balanceText = (sentence, type) => {
     const arr = sentence.split(" ");
     const top = arr[0];
@@ -17,6 +19,11 @@ const SliderBox = ({ data, idx }) => {
     }
   };
 
+  const handleClick = (e, name) => {
+    navigate(`/projects/${name}`)
+  }
+ 
+
   return (
     <div className="w-full h-screen relative flex justify-center items-center">
       <div className="w-full h-full absolute z-10">
@@ -29,15 +36,8 @@ const SliderBox = ({ data, idx }) => {
         </p>
         <h4>{balanceText(data.name, "top")}</h4>
         <h4>{balanceText(data.name, "bottom")}</h4>
-        <h5 className="pt-5">{data.role}</h5>
-        <div className="border-b mx-auto text-sm py-2 border-stone-300 cursor-pointer z-40 pt-20">
-          <Link
-            to={`/project/${data.id}`}
-            
-          >
-            VIEW PROJECT
-          </Link>
-        </div>
+        <h5 className="pt-5 pb-10">{data.role}</h5>
+          <button onClick={e => handleClick(e, data.url)} className="border-b mx-auto text-sm py-2 border-stone-300 cursor-pointer z-40">VIEW PROJECT</button>
       </div>
     </div>
   );

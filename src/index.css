@@ -6,6 +6,10 @@ body, html {
   background: #1c1917
 }
 
+a {
+  cursor: pointer;
+}
+
 @layer base {
   :root {
     --background: 227, 215, 187;

@@ -1,6 +1,7 @@
 const projects = [
   {
     id: 123,
+    url: "legacybox-backup",
     name: "Legacybox Backup",
     role: "Art Director & Lead Designer",
     studentProject: false,
@@ -11,10 +12,15 @@ const projects = [
       size: "landscape",
     },
     year: 2022, 
-    location: 'Chattanooga, TN'
+    location: 'Chattanooga, TN',
+    content: {
+      mainDescription: "Microdosing authentic church-key vape bruh fashion axe 8-bit cloud bread bitters iceland mumblecore. Celiac ramps pinterest authentic Brooklyn four dollar toast. Disrupt mumblecore lyft, pinterest actually poutine subway tile craft beer cliche poke. ", 
+      skills: ['illustrator', 'photoshop', 'indesign']
+    }
   },
   {
     id: 456,
+    url:"salted-baked-goods",
     name: "Salted Baked Goods",
     role: "Lead Desinger & Developer",
     studentProject: false,
@@ -25,10 +31,15 @@ const projects = [
       size: "landscape",
     },
     year: 2024, 
-    location: 'New York City, NY'
+    location: 'New York City, NY',
+    content: {
+      mainDescription: "Microdosing authentic church-key vape bruh fashion axe 8-bit cloud bread bitters iceland mumblecore. Celiac ramps pinterest authentic Brooklyn four dollar toast. Disrupt mumblecore lyft, pinterest actually poutine subway tile craft beer cliche poke. ", 
+      skills: ['illustrator', 'photoshop', 'indesign']
+    }
   },
   {
     id: 789,
+    url: 'the-rizzas',
     name: "The Rizzas",
     role: "Lead Designer",
     studentProject: false,
@@ -39,11 +50,16 @@ const projects = [
       size: "landscape",
     },
     year: 2023, 
-    location: 'Chattanooga, TN'
+    location: 'Chattanooga, TN', 
+    content: {
+      mainDescription: "Microdosing authentic church-key vape bruh fashion axe 8-bit cloud bread bitters iceland mumblecore. Celiac ramps pinterest authentic Brooklyn four dollar toast. Disrupt mumblecore lyft, pinterest actually poutine subway tile craft beer cliche poke. ", 
+      skills: ['illustrator', 'photoshop', 'indesign']
+    }
   },
   {
     id: 741,
     name: "Cheersly",
+    url: 'cheersly',
     role: "Lead Designer & Developer",
     studentProject: true,
     featureTag: "Web development",
@@ -53,11 +69,16 @@ const projects = [
       size: "landscape",
     },
     year: 2024, 
-    location: "Chattanooga, TN"
+    location: "Chattanooga, TN",
+    content: {
+      mainDescription: "Microdosing authentic church-key vape bruh fashion axe 8-bit cloud bread bitters iceland mumblecore. Celiac ramps pinterest authentic Brooklyn four dollar toast. Disrupt mumblecore lyft, pinterest actually poutine subway tile craft beer cliche poke. ", 
+      skills: ['illustrator', 'photoshop', 'indesign']
+    }
   },
 
   {
     id: 963,
+    url: 'legacybox-photobox',
     name: "Legacybox Photobox",
     role: "Art Director & Lead Designer",
     studentProject: false,
@@ -68,12 +89,17 @@ const projects = [
       size: "portrait",
     },
     year: 2021, 
-    location: 'Chattanooga, TN'
+    location: 'Chattanooga, TN',
+    content: {
+      mainDescription: "Microdosing authentic church-key vape bruh fashion axe 8-bit cloud bread bitters iceland mumblecore. Celiac ramps pinterest authentic Brooklyn four dollar toast. Disrupt mumblecore lyft, pinterest actually poutine subway tile craft beer cliche poke. ", 
+      skills: ['illustrator', 'photoshop', 'indesign']
+    }
   },
   
 
   {
     id: 852,
+    url: 'maison',
     name: "Maison",
     role: "Lead Designer",
     studentProject: false,
@@ -84,7 +110,11 @@ const projects = [
       size: "landscape",
     },
     year: 2023, 
-    location: 'Nashville, TN'
+    location: 'Nashville, TN',
+    content: {
+      mainDescription: "Microdosing authentic church-key vape bruh fashion axe 8-bit cloud bread bitters iceland mumblecore. Celiac ramps pinterest authentic Brooklyn four dollar toast. Disrupt mumblecore lyft, pinterest actually poutine subway tile craft beer cliche poke. ", 
+      skills: ['illustrator', 'photoshop', 'indesign']
+    }
   },
 ];
 

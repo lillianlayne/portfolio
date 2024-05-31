@@ -9,6 +9,8 @@ import CastStudeisScreen from "./pages/CastStudyScreen";
 import ProjectTemplate from "./pages/ProjectTemplate";
 import projects from "./data/projects";
 import UnderConstruction from "./pages/UnderConstruction";
+import ScrollTop from "./components/ScrollTop";
+
 
 
 function App() {
@@ -46,6 +48,7 @@ function App() {
     <div className="App bg-stone-900 text-stone-100 max-w-7xl mx-auto flex flex-col h-full">
       <Nav scrolling={scrolling} />
       <main>
+          <ScrollTop />
         <Routes>
           <Route path="/" element={<HomeScreen projects={data} />} />
           <Route path="/about" element={<AboutScreen />} />

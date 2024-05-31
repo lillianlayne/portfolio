@@ -27,7 +27,7 @@ const MainHero = () => {
             <em>Where</em>
           </h1>
           <p className="pb-10 sm:pb-0 text-right sm:text-left text-balance">
-            I bridge the gap between design <br className="hidden sm:block" />
+            I'm bridging the gap between design <br className="hidden sm:block" />
             and development, crafting intuitive <br className="hidden sm:block"/>
             user interfaces and building responsive <br className="hidden sm:block"/>
             web applications with precision and creativity.

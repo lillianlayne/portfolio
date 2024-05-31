@@ -15,9 +15,7 @@ const FeaturedSlideshow = () => {
       {data.map((proj, idx) => (
         <div className="h-[600px] md:h-[800px] relative" key={proj.name}>
           <div className="content absolute w-full z-10 transform-center flex text-center flex-col justify-center items-center">
-            <Parallax speed={-10} className="">
               <SliderBox data={proj} idx={idx} />
-            </Parallax>
           </div>
           <Parallax speed={15} className="md:w-3/4 h-full mx-auto ">
             <div
