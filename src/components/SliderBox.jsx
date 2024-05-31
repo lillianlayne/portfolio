@@ -20,7 +20,7 @@ const SliderBox = ({ data, idx }) => {
   };
 
   const handleClick = (e, name) => {
-    navigate(`/projects/${name}`)
+    navigate(`/project/${name}`)
   }
  
 
