@@ -6,9 +6,9 @@ const Nav = ({scrolling}) => {
   
   let navStyle;
   if (scrolling) {
-    navStyle = "fixed py-4 px-8 sm:px-16 flex justify-between transform-top backdrop-blur bg-stone-900 items-center z-50 transition-all w-full"
+    navStyle = "fixed py-4 px-8 sm:px-16 flex justify-between transform-top items-center z-50 transition-all w-full"
   } else {
-    navStyle = "fixed transform-top py-4 px-8 sm:px-16 flex justify-between backdrop-blur bg-stone-900 items-center z-50 transition-all w-full invisible"
+    navStyle = "fixed transform-top py-4 px-8 sm:px-16 flex justify-between backdrop-blur bg-transparent  items-center z-50 transition-all w-full invisible"
   }
 
 

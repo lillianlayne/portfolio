@@ -1,44 +1,73 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { BiArrowToRight } from "react-icons/bi";
+import { BsArrowRight } from "react-icons/bs";
+import SkillsSvg from "../SkillsSvg";
 
 const ProjectBanner = ({ data }) => {
+  const [title, setTitle] = useState(null);
+  const titleRef = useRef(null)
+
+  let liveSiteBtn;
+
+  if (data.liveSite) {
+    liveSiteBtn = (
+      <a
+        className="text-xs tracking-widest uppercase flex items-center justify-center pt-16 gap-4 hover:italic"
+        target="_blank"
+        href={data.liveSite}
+      >
+        View Live Site{" "}
+        <span>
+          <BsArrowRight />
+        </span>{" "}
+      </a>
+    );
+  }
+
+  const constructTitle = (arg) => {
+    const array = arg.split(" ");
+    setTitle(array);
+  };
+
+  useEffect(() => {
+    constructTitle(data.name);
+  }, [data]);
+
+ 
+  
+
   return (
-    <div className="w-full h-screen grid grid-cols-12 grid-rows-9">
-      <div className="row-start-1 col-span-full ">
-        <div className="flex w-full justify-end text-right gap-24">
-          {data.content.skills.map((skill, idx) => (
-            <div key={idx} className="size-12 bg-stone-800">
-              {/* logo image heere */}
-            </div>
+    <div className="h-screen flex">
+      <div className="flex h-full relative flex-col col-span-1 justify-between items-center w-1/2 flex-shrink-0 p-12 ">
+        <div ref={titleRef} className="absolute z-0 transform-center font-center flex flex-col items-center text-stone-950 ">
+          <img src={data.logo} alt="" className="w-3/4"/>
+        </div>
+        <div className="flex space-x-1 text-stone-500 pt-8">
+          {data.content.skills.map((skill) => (
+            <p key={skill}>{skill} /</p>
           ))}
         </div>
-      </div>
-      <div className="row-start-3 row-span-5 col-start-1 col-span-6 flex flex-col justify-between z-20">
-        <div className="flex justify-start gap-2">
-          <div className="h-fit p-2 bg-lightblue rounded-full flex items-center justify-center">
-            <p className=" text-stone-900 leading-none">{data.role}</p>
-          </div>
-          <div className="h-fit p-2 border-lightblue border rounded-full flex items-center justify-center">
-            <p className=" text-lightblue leading-none">{data.featureTag}</p>
-          </div>
-          <div className="h-fit p-2 border-lightblue border rounded-full flex items-center justify-center">
-            <p className=" text-lightblue leading-none">{data.year}</p>
+        <div className="div z-10 flex flex-col items-center">
+          <div>
+          <h4 className="text-3xl text-center">{data.name}</h4>
+          <p className="pt-8 z-10 text-center text-balance w-4/5 mx-auto">
+            {data.content.mainDescription}
+          </p>
+          {liveSiteBtn}
           </div>
         </div>
-        <div>
-          <div className="flex flex-col">
-            <h1>{data.name}</h1>
-          </div>
-          <p className="py-8 w-3/4">{data.content.mainDescription}</p>
+        <div className="flex space-x-1">
+          <p className="font-serif italic text-lg text-stone-500">
+            {data.role} - {data.year}
+          </p>
         </div>
       </div>
-      <div className="row-start-2 row-span-6 col-start-5 col-span-9 w-full overflow-hidden object-cover ">
-        <div className="h-full w-full object-cover ">
-          <img
-            src={data.featurePhoto.url}
-            alt=""
-            className="h-full w-full object-cover object-bottom"
-          />
-        </div>
+      <div className="h-full w-1/2 flex-shrink-0 col-span-1">
+        <img
+          src={data.featurePhoto.url}
+          alt=""
+          className="h-full w-full object-cover"
+        />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import SliderBox from "./SliderBox";
 import SpinWheel from "./HomeScreenComponents/SpinWheel";
 
 const FeaturedSlideshow = () => {
-  const data = [projects[0], projects[2], projects[3]];
+  const data = [projects[0], projects[1], projects[2]];
   return (
     <div className="flex-grow container">
       <div className="sticky top-20 left-0">

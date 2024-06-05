@@ -1,5 +1,7 @@
 import React from "react";
 import SpinWheel from "./SpinWheel";
+import SkillsSvg from "../SkillsSvg";
+
 
 const MainHero = () => {
   return (

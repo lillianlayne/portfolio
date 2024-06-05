@@ -45,7 +45,7 @@ function App() {
     }, [position])
 
   return (
-    <div className="App bg-stone-900 text-stone-100 max-w-7xl mx-auto flex flex-col h-full">
+    <div className="App bg-stone-900 text-stone-100 mx-auto flex flex-col h-full">
       <Nav scrolling={scrolling} />
       <main>
           <ScrollTop />

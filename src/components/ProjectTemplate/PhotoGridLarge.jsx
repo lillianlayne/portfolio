@@ -1,16 +1,24 @@
-import React from 'react'
+import React from "react";
+import FullImage from "../ImageComponents/FullImage";
+import SplitScreenImage from "../ImageComponents/SplitScreenImage";
 
-const PhotoGridLarge = () => {
+const PhotoGridLarge = ({ images, copy }) => {
   return (
-    <div className='w-full grid grid-cols-12 grid-rows-9 h-screen'>
-      <div className="col-start-1 col-span-5 row-start-1 row-span-3 bg-stone-500 h-full w-full"></div>
-      <div className="col-start-5 col-span-8 row-start-3 row-span-4 bg-stone-600"></div>
-      <div className="col-start-3 col-span-5 row-start-6 row-span-3 bg-stone-700"></div>
-      {/* <div className="col-start col-span row-start row-span bg-stone-400"></div> */}
-      {/* <div className="col-start col-span row-start row-span bg-stone-500"></div> */}
-      
+    <div className="flex flex-col gap-24 py-24">
+      <div>
+        <FullImage url={images?.feature.url} />
+        <div className="container px-28 w-3/4 mx-auto flex items-center justify-between font-serif  tracking-wide">
+          <p>deliverables</p>
+          <div className="italic text-xl">{copy?.deliverables}</div>
+        </div>
+      </div>
+      <SplitScreenImage
+        first={images?.splitOne.url}
+        second={images?.splitTwo.url}
+      />
+      <FullImage url={images?.fullOne.url} />
     </div>
-  )
-}
+  );
+};
 
-export default PhotoGridLarge
+export default PhotoGridLarge;

@@ -4,6 +4,8 @@ import projects from "../data/projects";
 import ProjectBanner from "../components/ProjectTemplate/ProjectBanner";
 import PhotoGridLarge from "../components/ProjectTemplate/PhotoGridLarge";
 import OtherProjects from "../components/ProjectTemplate/OtherProjects";
+import Footer from "../components/Footer";
+
 
 
 
@@ -25,10 +27,11 @@ const ProjectTemplate = () => {
 
 
   return project ? (
-    <div className="pt-24">
+    <div className="w-screen">
       <ProjectBanner data={project}/>
-      <PhotoGridLarge />
+      <PhotoGridLarge images={project.images} copy={project.copy} />
       <OtherProjects data={project}/>
+      <Footer />
     </div>
   ) : <div>loading</div>
 };
