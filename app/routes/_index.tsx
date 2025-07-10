@@ -15,6 +15,7 @@ export default function Index() {
   return (
     <div className='flex h-full flex-col items-center'>
       <Hero />
+      <div className='h-screen'></div>
     </div>
   );
 }

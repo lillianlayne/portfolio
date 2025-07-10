@@ -17,9 +17,9 @@ export const NavBar = () => {
   );
 
   return (
-    <div className='fixed flex h-fit w-full items-center justify-center px-2 py-4'>
-      <div className='relative w-full max-w-screen-xl'>
-        <motion.div id='logo' style={{ width, top, left }} className=''>
+    <div className='fixed flex h-fit w-full max-w-screen-xl items-center justify-center px-2 py-4'>
+      <div className='relative w-full'>
+        <motion.div id='logo' style={{ width, top, left }}>
           <Svg
             className='text-primary-200 h-full w-full max-w-screen-xl overflow-visible'
             src='/logoname.svg#logoname'
@@ -28,6 +28,38 @@ export const NavBar = () => {
           />
         </motion.div>
       </div>
+      <div className='absolute right-0 top-0 flex gap-4 p-4'>
+        {links.map((link, idx) => (
+          <div key={`link-${idx}`}>{link.name}</div>
+        ))}
+      </div>
     </div>
   );
 };
+
+const links = [
+  {
+    name: (
+      <p className='font-serif'>
+        /Port<em>f</em>folio
+      </p>
+    ),
+    link: '/',
+  },
+  {
+    name: (
+      <p className='font-serif'>
+        /A<em>b</em>o<em>u</em>t
+      </p>
+    ),
+    link: '/',
+  },
+  {
+    name: (
+      <p className='font-serif'>
+        /Co<em>n</em>tact
+      </p>
+    ),
+    link: '/',
+  },
+];
