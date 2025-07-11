@@ -7,7 +7,6 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
-import { NavBar } from './components';
 import './tailwind.css';
 
 export const links: LinksFunction = () => [
@@ -33,10 +32,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body data-theme='light'>
-        <div className='flex w-full justify-center'>
-          <NavBar />
-        </div>
+      <body data-theme='dark'>
+        <div className='flex w-full justify-center'>{/* <NavBar /> */}</div>
         {children}
         <ScrollRestoration />
         <Scripts />

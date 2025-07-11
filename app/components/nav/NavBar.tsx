@@ -1,8 +1,16 @@
 import { motion, useScroll, useTransform } from 'motion/react';
+import { RefObject } from 'react';
 import { Svg } from '../Svg';
 
-export const NavBar = () => {
-  const { scrollYProgress } = useScroll();
+export const NavBar = ({
+  reference,
+}: {
+  reference: RefObject<HTMLDivElement>;
+}) => {
+  const { scrollYProgress } = useScroll({
+    target: reference,
+    offset: ['start start', 'end center'],
+  });
 
   const width = useTransform(
     scrollYProgress,
@@ -21,7 +29,7 @@ export const NavBar = () => {
       <div className='relative w-full'>
         <motion.div id='logo' style={{ width, top, left }}>
           <Svg
-            className='text-primary-200 h-full w-full max-w-screen-xl overflow-visible'
+            className='h-full w-full max-w-screen-xl overflow-visible text-primary-200'
             src='/logoname.svg#logoname'
             title='Play'
             viewBox='0 0 1447 220'

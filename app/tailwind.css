@@ -13,7 +13,7 @@
 
 [data-theme='dark'] {
   --primary-100: #f2e6d7;
-  --primary-200: #afafaf;
+  --primary-200: #f2e6d7;
   --primary-300: #a6a6a6;
   --primary-400: #959595;
   --primary-500: #494e54;
@@ -22,7 +22,7 @@
 
 html,
 body {
-  @apply bg-primary-600;
+  @apply bg-primary-600 text-primary-100;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: light;
@@ -31,6 +31,16 @@ body {
 
 @layer utilities {
   p {
-    @apply text-primary-100 text-sm;
+    @apply text-sm text-primary-100;
+  }
+
+  h2 {
+    @apply text-5xl font-thin text-primary-100;
+  }
+  h2 > span {
+    font-weight: 100;
+    font-family: 'ivypresto-display';
+    font-style: italic;
+    font-stretch: normal;
   }
 }

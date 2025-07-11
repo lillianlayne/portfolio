@@ -9,7 +9,7 @@ export const useLogoHeight = () => {
     if (!logo) return;
 
     const height = logo.getBoundingClientRect().height;
-    setLogoHeight(height);
+    setLogoHeight(height * 1.5);
   };
 
   useEffect(() => {
