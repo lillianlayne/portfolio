@@ -1,0 +1,50 @@
+{
+  "hero": {
+    "titleList": ["UI/UX Designer", "Front-End Developer", "Something Fun"],
+    "mainDescription": "A design-developer hybrid who loves turning ideas into beautiful, functional digital experiences. Fluent in both pixels and code, with the ability to dream up the perfect user interface and actually build it too. The bridge between design and development that helps great ideas come to life on screen.",
+    "location": "Chattanooga, TN | Anywhere with a wifi connection",
+    "experience": "6+ years of experience"
+  },
+  "description": {
+    "bodyCopy1": "A new paragraph here that takes up some lines to back up whatever was said up top. Make sure that it’s clear and concise. Probably check it with claude or something as well to make sure it’s polished as it should be.",
+    "bodyCopy2": "A new paragraph here that takes up some lines to back up whatever was said up top. Make sure that it’s clear and concise. Probably check it with claude or something as well to make sure it’s polished as it should be."
+  },
+  "projects": [
+    {
+      "title": "Title One",
+      "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
+      "year": "2025",
+      "roles": ["role1", "role2"],
+      "ratio": "5/4",
+      "col": 2,
+      "span": 4
+    },
+    {
+      "title": "Title Two",
+      "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
+      "year": "2025",
+      "roles": ["role1", "role2"],
+      "ratio": "1/1",
+      "col": 8,
+      "span": 4
+    },
+    {
+      "title": "Title Three",
+      "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
+      "year": "2025",
+      "roles": ["role1", "role2"],
+      "ratio": "4/3",
+      "col": 1,
+      "span": 5
+    },
+    {
+      "title": "Title Four",
+      "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
+      "year": "2025",
+      "roles": ["role1", "role2"],
+      "ratio": "4/5",
+      "col": 9,
+      "span": 4
+    }
+  ]
+}

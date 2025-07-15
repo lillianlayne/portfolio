@@ -1,73 +1,20 @@
-import { motion, useScroll, useTransform } from 'motion/react';
-import { RefObject } from 'react';
-import { Svg } from '../Svg';
+import { Links } from './components/Links';
+import { Logo } from './components/Logo';
+import { ThemeToggle } from './components/ThemeToggle';
 
 export const NavBar = ({
-  reference,
+  theme,
+  setTheme,
 }: {
-  reference: RefObject<HTMLDivElement>;
+  theme: string;
+  setTheme: (val: string) => void;
 }) => {
-  const { scrollYProgress } = useScroll({
-    target: reference,
-    offset: ['start start', 'end center'],
-  });
-
-  const width = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ['100%', '50%', '10%'],
-  );
-  const top = useTransform(scrollYProgress, [0, 0.5, 1], ['50%', '50%', '50%']);
-  const left = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    ['50%', '50%', '50%'],
-  );
-
   return (
-    <div className='fixed flex h-fit w-full max-w-screen-xl items-center justify-center px-2 py-4'>
-      <div className='relative w-full'>
-        <motion.div id='logo' style={{ width, top, left }}>
-          <Svg
-            className='h-full w-full max-w-screen-xl overflow-visible text-primary-200'
-            src='/logoname.svg#logoname'
-            title='Play'
-            viewBox='0 0 1447 220'
-          />
-        </motion.div>
-      </div>
-      <div className='absolute right-0 top-0 flex gap-4 p-4'>
-        {links.map((link, idx) => (
-          <div key={`link-${idx}`}>{link.name}</div>
-        ))}
-      </div>
+    <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 py-4'>
+      <ThemeToggle theme={theme} setTheme={setTheme} />
+      {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
+      <Logo />
+      <Links />
     </div>
   );
 };
-
-const links = [
-  {
-    name: (
-      <p className='font-serif'>
-        /Port<em>f</em>folio
-      </p>
-    ),
-    link: '/',
-  },
-  {
-    name: (
-      <p className='font-serif'>
-        /A<em>b</em>o<em>u</em>t
-      </p>
-    ),
-    link: '/',
-  },
-  {
-    name: (
-      <p className='font-serif'>
-        /Co<em>n</em>tact
-      </p>
-    ),
-    link: '/',
-  },
-];

@@ -7,6 +7,9 @@ import {
   ScrollRestoration,
 } from '@remix-run/react';
 
+import { useState } from 'react';
+import { NavBar } from './components';
+import { HeroProvider } from './lib/context';
 import './tailwind.css';
 
 export const links: LinksFunction = () => [
@@ -24,17 +27,21 @@ export const links: LinksFunction = () => [
 ];
 
 export function Layout({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<string>('dark');
   return (
-    <html lang='en'>
+    <html lang='en' data-theme={theme}>
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <Meta />
         <Links />
       </head>
-      <body data-theme='dark'>
-        <div className='flex w-full justify-center'>{/* <NavBar /> */}</div>
-        {children}
+      <body data-theme={theme}>
+        <HeroProvider>
+            <NavBar setTheme={setTheme} theme={theme} />
+          <div className='pt-12'>{children}</div>
+          <div className='h-96'></div>
+        </HeroProvider>
         <ScrollRestoration />
         <Scripts />
       </body>

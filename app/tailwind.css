@@ -4,20 +4,27 @@
 
 :root {
   --primary-600: #f2e6d7;
-  --primary-500: #afafaf;
+  --primary-500: #e4d4bf;
   --primary-400: #a6a6a6;
   --primary-300: #959595;
   --primary-200: #494e54;
   --primary-100: #272c31;
+  --accent-green: #828c51;
+
+  --gh-cell: #e4d4bf40;
+
+  --header-height: 48px;
 }
 
 [data-theme='dark'] {
   --primary-100: #f2e6d7;
-  --primary-200: #f2e6d7;
+  --primary-200: #e4d4bf;
   --primary-300: #a6a6a6;
   --primary-400: #959595;
   --primary-500: #494e54;
   --primary-600: #272c31;
+
+  --gh-cell: #494e5440;
 }
 
 html,
@@ -35,12 +42,16 @@ body {
   }
 
   h2 {
-    @apply text-5xl font-thin text-primary-100;
+    @apply text-5xl font-light text-primary-100;
   }
   h2 > span {
     font-weight: 100;
     font-family: 'ivypresto-display';
     font-style: italic;
     font-stretch: normal;
+  }
+
+  .underline-btn {
+    @apply relative before:absolute before:bottom-0 before:left-0 before:h-[.5px] before:w-full before:origin-right before:scale-x-0 before:bg-white before:transition-transform before:duration-300 hover:text-white hover:before:origin-left hover:before:scale-x-100;
   }
 }

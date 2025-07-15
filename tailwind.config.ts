@@ -19,6 +19,7 @@ export default {
         ],
         serif: ['ivypresto-display'],
         'text-serif': ['ivypresto-text'],
+        mono: 'franklin-gothic-ext-comp-urw, sans-serif',
       },
       colors: {
         primary: {
@@ -29,6 +30,10 @@ export default {
           500: 'var(--primary-500)',
           600: 'var(--primary-600)',
         },
+        accent: {
+          green: 'var(--accent-green)',
+        },
+        gh: 'var(--gh-cell)',
       },
     },
   },

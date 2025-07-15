@@ -12,11 +12,12 @@ interface SvgProps {
   style?: React.CSSProperties;
   title?: string;
   viewBox: string;
+  id?: string;
 }
 
 export const Svg = forwardRef(
   (
-    { className, src, title, viewBox, ...props }: SvgProps,
+    { className, src, title, viewBox, id, ...props }: SvgProps,
     ref: React.ForwardedRef<SVGSVGElement>,
   ) => {
     return (
@@ -24,6 +25,7 @@ export const Svg = forwardRef(
         ref={ref}
         viewBox={viewBox}
         className={className || 'h-full w-full'}
+        id={id || 'svg'}
         {...props}
       >
         {title && <title>{title}</title>}
