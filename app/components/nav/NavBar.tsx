@@ -73,10 +73,14 @@ export const NavBar = ({
 
   return pathname === '/' ? (
     <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 px-4 py-4 xl:px-0'>
-      {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
+      <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div>
       <motion.div
         layout
-        className='col-span-1 row-start-1 w-full'
+        className='z-20 col-span-1 row-start-1 w-full'
+        transition={{
+          default: { ease: 'linear' },
+          layout: { duration: 0.3 },
+        }}
         style={{
           gridColumnStart: logo[layout].gridColumnStart,
           justifySelf: logo[layout].justifySelf,
@@ -89,7 +93,7 @@ export const NavBar = ({
       </motion.div>
       <motion.div
         layout
-        className='col-span-1 row-start-1'
+        className='z-20 col-span-1 row-start-1'
         style={{
           gridColumnStart: toggle[layout].gridColumnStart,
           justifySelf: toggle[layout].justifySelf,
@@ -97,7 +101,7 @@ export const NavBar = ({
       >
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </motion.div>
-      <div className='col-span-1 col-start-3 row-start-1 justify-self-end'>
+      <div className='z-20 col-span-1 col-start-3 row-start-1 justify-self-end'>
         <Links />
       </div>
     </div>
@@ -105,7 +109,7 @@ export const NavBar = ({
     <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 px-4 py-4 xl:px-0'>
       {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
       <div
-        className='col-span-1 row-start-1 w-full'
+        className='z-20 col-span-1 row-start-1 w-full'
         style={{
           gridColumnStart: logo.end.gridColumnStart,
           justifySelf: logo.end.justifySelf,
@@ -117,7 +121,7 @@ export const NavBar = ({
         <Logo />
       </div>
       <div
-        className='col-span-1 row-start-1'
+        className='z-20 col-span-1 row-start-1'
         style={{
           gridColumnStart: toggle.end.gridColumnStart,
           justifySelf: toggle.end.justifySelf,
@@ -125,7 +129,7 @@ export const NavBar = ({
       >
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </div>
-      <div className='col-span-1 col-start-3 row-start-1 justify-self-end'>
+      <div className='z-20 col-span-1 col-start-3 row-start-1 justify-self-end'>
         <Links />
       </div>
     </div>

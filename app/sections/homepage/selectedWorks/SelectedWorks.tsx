@@ -35,6 +35,9 @@ export const SelectedWorks = () => {
         style={{ y }}
         className='sticky left-1/2 top-1/4 z-10 flex -translate-x-1/2 -translate-y-1/2 transform flex-col pt-24 text-center'
         ref={headerRef}
+        transition={{
+          ease: 'easeInOut',
+        }}
       >
         <h1 className='font-mono text-[180px] uppercase leading-none text-primary-100'>
           selected
@@ -44,7 +47,7 @@ export const SelectedWorks = () => {
         </h1>
       </motion.div>
       {/* project cards */}
-      <div className='sticky z-20 grid grid-cols-12 px-4 py-[40vh] xl:px-0'>
+      <div className='transparent-gradient sticky z-20 grid grid-cols-12 px-4 py-[40vh] xl:px-0'>
         {projects.map((project, idx) => (
           <div
             key={project.title}

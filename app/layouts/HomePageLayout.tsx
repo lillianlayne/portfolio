@@ -7,7 +7,7 @@ export const HomePageLayout = () => {
       <div className='relative w-full max-w-screen-xl'>
         <Hero />
       </div>
-      <div className='max-w-screen-xl'>
+      <div className='h-screen max-w-screen-xl'>
         <Introduction />
       </div>
       <div className='w-full max-w-screen-xl'>

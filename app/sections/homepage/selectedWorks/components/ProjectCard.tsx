@@ -7,6 +7,8 @@ interface Project {
   year: string;
   roles: string[];
   ratio: string;
+  image: string;
+  textColor: string;
 }
 
 export const ProjectCard = ({
@@ -15,6 +17,8 @@ export const ProjectCard = ({
   year,
   roles,
   ratio,
+  image,
+  textColor,
 }: Project) => {
   // aspect-[5/4] aspect-[1/1] aspect-[2/3] aspect-[4/5]  aspect-[4/3]
   const titleSplit = title.split(' ');
@@ -32,19 +36,30 @@ export const ProjectCard = ({
     title: useTransform(scrollYProgress, [0, 0.9, 1], ['-120%', '120%', '0%']),
   };
 
+  // text-primary-100 text-primary-600
+
   return (
     <motion.div ref={cardRef} style={{ y: y.container }}>
-      <div className={`w-full aspect-[${ratio}] rounded-2xl bg-primary-500`}>
-        <motion.div className='p-4'>
-          <p className='font-mono text-2xl'>{titleOne}</p>
-          <p className='-mt-4 font-serif text-2xl font-thin italic'>
+      <div
+        className={`w-full aspect-[${ratio}] relative flex items-center justify-center overflow-hidden rounded-2xl bg-primary-500`}
+      >
+        <img
+          src={image}
+          alt={title}
+          className='h-auto w-full object-cover object-center'
+        />
+        <motion.div className='absolute left-8 top-8 scale-150'>
+          <p className={`font-mono text-3xl ${textColor}`}>{titleOne}</p>
+          <p
+            className={`-mt-4 font-serif text-2xl font-thin italic ${textColor}`}
+          >
             {titleTwo}
           </p>
         </motion.div>
       </div>
-      <div className='flex flex-col items-center justify-start'>
+      <div className='flex flex-col items-center justify-start pt-4'>
         <p className='pt-2 text-center font-serif text-primary-300'>{year}</p>
-        <p className='max-w-96 text-balance pb-4 pt-2 text-center font-light'>
+        <p className='text-balance pb-4 pt-2 text-center text-base font-light'>
           {description}
         </p>
 

@@ -11,40 +11,52 @@
   },
   "projects": [
     {
-      "title": "Title One",
-      "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
-      "year": "2025",
-      "roles": ["role1", "role2"],
-      "ratio": "5/4",
-      "col": 2,
-      "span": 4
-    },
-    {
-      "title": "Title Two",
-      "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
-      "year": "2025",
-      "roles": ["role1", "role2"],
+      "title": "Legacybox Cloud",
+      "image": "https://advisory-indigo-jackal.myfilebase.com/ipfs/QmcWL2XHQt619cW5cHUCyKbaQ4SYcHX5A2PWzR4zYbzrFd",
+      "description": "Legacybox Cloud is a secure streaming platform that delivers digitized family memories to customers after their analog media is professionally converted.",
+      "year": "2024",
+      "roles": [
+        "Lead UI/UX Designer",
+        "Front-End Developer",
+        "Product Manager"
+      ],
       "ratio": "1/1",
-      "col": 8,
-      "span": 4
+      "col": 2,
+      "span": 5,
+      "textColor": "text-primary-600"
     },
     {
-      "title": "Title Three",
+      "title": "Legacybox Rebrand",
       "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
+      "image": "https://advisory-indigo-jackal.myfilebase.com/ipfs/QmYDAacf4j3zpZGSb5rMccsvG51sCQRCMUUPibp9XwmDYw",
+      "year": "2025",
+      "roles": ["Art Director"],
+      "ratio": "4/6",
+      "col": 7,
+      "span": 5,
+      "textColor": "text-primary-100"
+    },
+    {
+      "title": "Cloud Admin App",
+      "image": "https://advisory-indigo-jackal.myfilebase.com/ipfs/QmbmbKWp7JvXDhL69EMcLp8cnDTpfQFYR9CfLRevnxTuX5",
+      "description": "The Legacybox Cloud Admin Dashboard is a comprehensive customer service tool that enables support teams to efficiently manage customer accounts and resolve issues.",
       "year": "2025",
       "roles": ["role1", "role2"],
-      "ratio": "4/3",
+      "ratio": "3/2",
       "col": 1,
-      "span": 5
+      "span": 5,
+      "textColor": "text-primary-100"
     },
     {
       "title": "Title Four",
+      "image": "https://advisory-indigo-jackal.myfilebase.com/ipfs/QmYDAacf4j3zpZGSb5rMccsvG51sCQRCMUUPibp9XwmDYw",
       "description": "Description of the project should take up about 2-3 lines only. A quick description is all.",
       "year": "2025",
       "roles": ["role1", "role2"],
       "ratio": "4/5",
       "col": 9,
-      "span": 4
+      "span": 4,
+      "textColor": "text-primary-100"
     }
   ]
 }

@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --primary-600: #f2e6d7;
-  --primary-500: #e4d4bf;
-  --primary-400: #a6a6a6;
-  --primary-300: #959595;
+  --primary-600: #f0e4cf;
+  --primary-620: #f0e4cf80;
+  --primary-500: #9a9284;
+  --primary-400: #9a9284;
+  --primary-300: #605752;
   --primary-200: #494e54;
-  --primary-100: #272c31;
-  --accent-green: #828c51;
+  --primary-100: #1b1a1a;
+  --accent-green: #ff8200;
 
   --gh-cell: #e4d4bf40;
 
@@ -17,14 +18,15 @@
 }
 
 [data-theme='dark'] {
-  --primary-100: #f2e6d7;
-  --primary-200: #e4d4bf;
-  --primary-300: #a6a6a6;
-  --primary-400: #959595;
+  --primary-100: #f0e4cf;
+  --primary-200: #9a9284;
+  --primary-300: #9a9284;
+  --primary-400: #605752;
   --primary-500: #494e54;
-  --primary-600: #272c31;
+  --primary-600: #1b1a1a;
+  --primary-620: #1b1a1a95;
 
-  --gh-cell: #494e5440;
+  --gh-cell: #ffffff10;
 }
 
 html,
@@ -53,5 +55,14 @@ body {
 
   .underline-btn {
     @apply relative before:absolute before:bottom-0 before:left-0 before:h-[.5px] before:w-full before:origin-right before:scale-x-0 before:bg-white before:transition-transform before:duration-300 hover:text-white hover:before:origin-left hover:before:scale-x-100;
+  }
+
+  .transparent-gradient {
+    background: linear-gradient(
+      transparent 10%,
+      var(--primary-620) 20%,
+      var(--primary-620) 70%,
+      transparent 90%
+    );
   }
 }
