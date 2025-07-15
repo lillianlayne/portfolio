@@ -72,7 +72,7 @@ export const NavBar = ({
   };
 
   return pathname === '/' ? (
-    <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 py-4'>
+    <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 px-4 py-4 xl:px-0'>
       {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
       <motion.div
         layout
@@ -102,7 +102,7 @@ export const NavBar = ({
       </div>
     </div>
   ) : (
-    <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 py-4'>
+    <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 px-4 py-4 xl:px-0'>
       {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
       <div
         className='col-span-1 row-start-1 w-full'

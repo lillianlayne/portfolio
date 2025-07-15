@@ -42,7 +42,7 @@ body {
   }
 
   h2 {
-    @apply text-5xl font-light text-primary-100;
+    @apply text-4xl font-light text-primary-100 xl:text-5xl;
   }
   h2 > span {
     font-weight: 100;

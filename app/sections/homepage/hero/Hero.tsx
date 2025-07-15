@@ -37,7 +37,7 @@ export const Hero = () => {
     <motion.div
       layout
       ref={heroRef}
-      className='relative flex h-full flex-col items-center justify-between'
+      className='relative flex h-full flex-col items-center justify-between px-4 xl:p-0'
       style={{ height }}
     >
       <DescriptionList />
