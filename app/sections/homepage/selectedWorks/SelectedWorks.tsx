@@ -46,7 +46,7 @@ export const SelectedWorks = () => {
         </h1>
       </motion.div>
       {/* project cards */}
-      <div className='sticky z-20 grid grid-cols-12 py-[40vh]'>
+      <div className='sticky z-20 grid auto-rows-[300px] grid-cols-12 py-[40vh]'>
         {projects.map((project, idx) => (
           <div
             key={project.title}

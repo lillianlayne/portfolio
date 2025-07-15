@@ -1,3 +1,4 @@
+import { useLocation } from '@remix-run/react';
 import { motion, useMotionValueEvent, useScroll } from 'motion/react';
 import { useEffect, useState } from 'react';
 import { useHeroContext } from '~/lib/context';
@@ -14,8 +15,10 @@ export const NavBar = ({
 }) => {
   const [layout, setLayout] = useState<'start' | 'end'>('start');
   const [scrollDirection, setScrollDirection] = useState<string>('up');
+
   const { heroRef } = useHeroContext();
   const { scrollY } = useScroll({ target: heroRef });
+  const { pathname } = useLocation();
 
   useMotionValueEvent(scrollY, 'change', (current) => {
     const previous = scrollY.getPrevious();
@@ -68,7 +71,7 @@ export const NavBar = ({
     },
   };
 
-  return (
+  return pathname === '/' ? (
     <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 py-4'>
       {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
       <motion.div
@@ -94,6 +97,34 @@ export const NavBar = ({
       >
         <ThemeToggle theme={theme} setTheme={setTheme} />
       </motion.div>
+      <div className='col-span-1 col-start-3 row-start-1 justify-self-end'>
+        <Links />
+      </div>
+    </div>
+  ) : (
+    <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 py-4'>
+      {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
+      <div
+        className='col-span-1 row-start-1 w-full'
+        style={{
+          gridColumnStart: logo.end.gridColumnStart,
+          justifySelf: logo.end.justifySelf,
+          gridColumn: logo.end.gridColumn,
+          gridRowStart: logo.end.gridRowStart,
+          width: logo.end.width,
+        }}
+      >
+        <Logo />
+      </div>
+      <div
+        className='col-span-1 row-start-1'
+        style={{
+          gridColumnStart: toggle.end.gridColumnStart,
+          justifySelf: toggle.end.justifySelf,
+        }}
+      >
+        <ThemeToggle theme={theme} setTheme={setTheme} />
+      </div>
       <div className='col-span-1 col-start-3 row-start-1 justify-self-end'>
         <Links />
       </div>
