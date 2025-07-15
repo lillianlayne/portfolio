@@ -38,7 +38,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body data-theme={theme}>
         <HeroProvider>
-            <NavBar setTheme={setTheme} theme={theme} />
+          <NavBar setTheme={setTheme} theme={theme} />
           <div className='pt-12'>{children}</div>
           <div className='h-96'></div>
         </HeroProvider>

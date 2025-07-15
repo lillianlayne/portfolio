@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'motion/react';
+import { useScroll, useTransform } from 'motion/react';
 import { useEffect, useRef } from 'react';
 import { useHeroContext } from '~/lib/context';
 import { useLogoHeight } from '~/lib/hooks';
@@ -31,21 +31,17 @@ export const Hero = () => {
   }, [heroRef]);
 
   return (
-    <motion.div
+    <div
       ref={heroRef}
-      className='relative flex h-full min-h-min flex-col items-center justify-between gap-12'
-      style={{ height, paddingTop, maxHeight: `calc(100vh-${logoHeight}px)` }}
+      className='relative flex h-[90vh] min-h-min flex-col items-center justify-between gap-12'
     >
       <DescriptionList />
       {/* line */}
-      <motion.div
-        className='h-full max-h-72 w-[1px]'
-        style={{ height: lineHeight }}
-      >
+      <div className='h-full max-h-72 w-[1px]'>
         <div className='h-full w-full bg-primary-400'></div>
-      </motion.div>
+      </div>
       <SmallDescription />
       <Flourish />
-    </motion.div>
+    </div>
   );
 };

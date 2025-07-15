@@ -19,7 +19,7 @@ export default {
         ],
         serif: ['ivypresto-display'],
         'text-serif': ['ivypresto-text'],
-        mono: 'franklin-gothic-ext-comp-urw, sans-serif',
+        mono: ['franklin-gothic-ext-comp-urw, sans-serif', 'franklin-gothic'],
       },
       colors: {
         primary: {

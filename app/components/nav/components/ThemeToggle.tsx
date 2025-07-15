@@ -9,7 +9,7 @@ export const ThemeToggle = ({
   setTheme: (val: string) => void;
 }) => {
   return (
-    <div className='z-20 flex gap-1 place-self-start rounded-full border border-primary-400 bg-primary-600 p-[1px]'>
+    <div className='flex w-fit gap-1 rounded-full border border-primary-400 bg-primary-600 p-[1px]'>
       <button
         className={classNames(
           'flex aspect-square h-4 items-center justify-center rounded-full p-1',

@@ -1,6 +1,6 @@
 export const Links = () => {
   return (
-    <div className='z-20 flex gap-4 justify-self-end text-primary-100'>
+    <div className='flex gap-4 text-primary-100'>
       {links.map((link, idx) => (
         <div key={`link-${idx}`}>{link.name}</div>
       ))}
