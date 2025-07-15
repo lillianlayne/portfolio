@@ -19,8 +19,6 @@ export const SelectedWorks = () => {
     ['0vh', '0vh', '0vh', '0vh'],
   );
 
-  // const opacity = useTransform(headerScroll, [0, 0.7, 1], [1, 0.5, 1]);
-
   // row-start-1 row-start-2 row-start-3 row-start-4 row-start-5 row-start-6
   // col-start-1 col-start-2 col-start-3 col-start-4 col-start-5 col-start-6 col-start-7 col-start-8 col-start-9 col-start-10 col-start-11 col-start-12
   // col-span-1 col-span-2 col-span-3 col-span-4
@@ -35,7 +33,7 @@ export const SelectedWorks = () => {
       {/* section title */}
       <motion.div
         style={{ y }}
-        className='sticky left-1/2 top-1/4 z-10 flex -translate-x-1/2 -translate-y-1/2 transform flex-col py-24 text-center'
+        className='sticky left-1/2 top-1/4 z-10 flex -translate-x-1/2 -translate-y-1/2 transform flex-col pt-24 text-center'
         ref={headerRef}
       >
         <h1 className='font-mono text-[180px] uppercase leading-none text-primary-100'>
@@ -46,7 +44,7 @@ export const SelectedWorks = () => {
         </h1>
       </motion.div>
       {/* project cards */}
-      <div className='sticky z-20 grid auto-rows-[300px] grid-cols-12 py-[40vh]'>
+      <div className='sticky z-20 grid grid-cols-12 px-4 py-[40vh] xl:px-0'>
         {projects.map((project, idx) => (
           <div
             key={project.title}
