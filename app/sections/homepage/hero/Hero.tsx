@@ -1,17 +1,15 @@
-import { motion, useAnimate, useScroll, useTransform } from 'motion/react';
+import { motion, useAnimate } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
-import { useHeroContext } from '~/lib/context';
-import { useLogoHeight } from '~/lib/hooks';
 import settings from '../settings.json';
 import { DescriptionList, Flourish, SmallDescription } from './components';
 
 export const Hero = () => {
   const bodyRef = useRef<HTMLDivElement>(null);
-  const { heroRef } = useHeroContext();
-  const { scrollYProgress: bodyProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start'],
-  });
+  // const { heroRef } = useHeroContext();
+  // const { scrollYProgress: bodyProgress } = useScroll({
+  //   target: heroRef,
+  //   offset: ['start start', 'end start'],
+  // });
 
   const { titleList } = settings.hero;
 
@@ -19,13 +17,13 @@ export const Hero = () => {
 
   const [height, setHeight] = useState<string>('100vh');
 
-  const { logoHeight } = useLogoHeight();
-  const lineHeight = useTransform(
-    bodyProgress,
-    [0, 0.5, 1],
-    [`100%`, `50%`, `0%`],
-  );
-  const paddingTop = `${logoHeight - 80}px`;
+  // const { logoHeight } = useLogoHeight();
+  // const lineHeight = useTransform(
+  //   bodyProgress,
+  //   [0, 0.5, 1],
+  //   [`100%`, `50%`, `0%`],
+  // );
+  // const paddingTop = `${logoHeight - 80}px`;
 
   // const animateEntrance = async () => {
   //   [...Array(titleList.length).fill(0)].map((item, idx) =>
@@ -62,16 +60,15 @@ export const Hero = () => {
     animateEntrance();
   }, []);
 
-  useEffect(() => {
-    console.log('logo height', logoHeight);
-    const windowHeight = window.innerHeight;
-    setHeight(`${windowHeight - logoHeight - 60}px`);
-  }, [logoHeight]);
+  // useEffect(() => {
+  //   console.log('logo height', logoHeight);
+  //   const windowHeight = window.innerHeight;
+  //   setHeight(`${windowHeight - logoHeight - 60}px`);
+  // }, [logoHeight]);
 
   return (
-    <motion.div
-      layout
-      ref={heroRef}
+    <div
+      // ref={heroRef}
       className='relative h-full flex-col items-center justify-between px-4 xl:p-0'
       style={{ height }}
     >
@@ -95,6 +92,6 @@ export const Hero = () => {
           <Flourish />
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };

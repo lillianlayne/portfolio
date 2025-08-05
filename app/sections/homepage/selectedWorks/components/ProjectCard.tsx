@@ -2,26 +2,31 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 
 interface Project {
-  title: string;
-  description: string;
+  project: string;
+  descriptions: string[];
   year: string;
   roles: string[];
-  ratio: string;
-  image: string;
-  textColor: string;
+  tools: string[];
+  cardSettings: { ratio: string; col: number; span: number; textColor: string };
+  shortDescription: string;
+  images: {
+    featureImage: string;
+    heroImage: string;
+    secondaryImages: string[];
+  };
 }
 
 export const ProjectCard = ({
-  title,
-  description,
+  project,
+  descriptions,
   year,
   roles,
-  ratio,
-  image,
-  textColor,
+  shortDescription,
+  cardSettings,
+  images,
 }: Project) => {
   // aspect-[5/4] aspect-[1/1] aspect-[2/3] aspect-[4/5]  aspect-[4/3]
-  const titleSplit = title.split(' ');
+  const titleSplit = project.split('-');
   const titleOne = titleSplit.shift();
   const titleTwo = titleSplit.slice(0, 1).join(' ');
 
@@ -41,17 +46,19 @@ export const ProjectCard = ({
   return (
     <motion.div ref={cardRef} style={{ y: y.container }}>
       <div
-        className={`w-full aspect-[${ratio}] relative flex items-center justify-center overflow-hidden rounded-2xl bg-primary-500`}
+        className={`w-full aspect-[${cardSettings.ratio}] relative flex items-center justify-center overflow-hidden rounded-2xl bg-primary-500`}
       >
         <img
-          src={image}
-          alt={title}
+          src={images.featureImage}
+          alt={project}
           className='h-auto w-full object-cover object-center'
         />
-        <motion.div className='absolute left-8 top-8 scale-150'>
-          <p className={`font-mono text-3xl ${textColor}`}>{titleOne}</p>
+        <motion.div className='absolute left-8 top-8 scale-150 capitalize'>
+          <p className={`font-mono text-3xl ${cardSettings.textColor}`}>
+            {titleOne}
+          </p>
           <p
-            className={`-mt-4 font-serif text-2xl font-thin italic ${textColor}`}
+            className={`-mt-4 font-serif text-2xl font-thin italic ${cardSettings.textColor}`}
           >
             {titleTwo}
           </p>
@@ -60,7 +67,7 @@ export const ProjectCard = ({
       <div className='flex flex-col items-center justify-start pt-4'>
         <p className='pt-2 text-center font-serif text-primary-300'>{year}</p>
         <p className='text-balance pb-4 pt-2 text-center text-base font-light'>
-          {description}
+          {shortDescription}
         </p>
 
         <div className='flex items-center justify-center gap-4 text-center font-serif font-thin italic text-stone-300'>

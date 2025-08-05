@@ -5,11 +5,11 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useLocation,
 } from '@remix-run/react';
 
 import { useState } from 'react';
-import { NavBar } from './components';
-import { HeroProvider } from './lib/context';
+import { StaticNavBar } from './components/nav/StaticNavBar';
 import './tailwind.css';
 
 export const links: LinksFunction = () => [
@@ -28,6 +28,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [theme, setTheme] = useState<string>('dark');
+  const { pathname } = useLocation();
   return (
     <html lang='en' data-theme={theme}>
       <head>
@@ -37,11 +38,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body data-theme={theme}>
-        <HeroProvider>
-          <NavBar setTheme={setTheme} theme={theme} />
-          <div className='pt-12'>{children}</div>
-          <div className='h-96'></div>
-        </HeroProvider>
+        <StaticNavBar setTheme={setTheme} theme={theme} />
+        <div>{children}</div>
+        <div className='h-96'></div>
         <ScrollRestoration />
         <Scripts />
       </body>

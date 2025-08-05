@@ -10,7 +10,8 @@
     "start": "remix-serve ./build/server/index.js",
     "typecheck": "tsc",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "create": "node createComps.cjs"
   },
   "dependencies": {
     "@remix-run/node": "^2.16.8",

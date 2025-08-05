@@ -1,18 +1,14 @@
-import { useScroll, useTransform } from 'motion/react';
-import { useRef } from 'react';
 import { Svg } from '~/components/Svg';
-import { useHeroContext } from '~/lib/context';
 
 export const Logo = () => {
-  const logoRef = useRef<HTMLDivElement>(null);
-  const { heroRef } = useHeroContext();
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start'],
-  });
+  // const { heroRef } = useHeroContext();
+  // const { scrollYProgress } = useScroll({
+  //   target: heroRef,
+  //   offset: ['start start', 'end start'],
+  // });
 
-  const maxWidth = useTransform(scrollYProgress, [0, 1], ['1280px', '96px']);
-  const paddingTop = useTransform(scrollYProgress, [0, 1], ['32px', '0px']);
+  // const maxWidth = useTransform(scrollYProgress, [0, 1], ['1280px', '96px']);
+  // const paddingTop = useTransform(scrollYProgress, [0, 1], ['32px', '0px']);
 
   return (
     <div className='h-fit w-full overflow-visible'>

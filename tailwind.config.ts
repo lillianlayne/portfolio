@@ -4,7 +4,21 @@ export default {
   content: ['./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}'],
   darkMode: ['selector', '[data-theme="dark"]'],
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        md: '2rem',
+        lg: '4rem',
+        xl: '4rem',
+        screen: '0rem',
+      },
+    },
     extend: {
+      screens: {
+        full: '100vw',
+      },
       fontFamily: {
         sans: [
           'work-sans',

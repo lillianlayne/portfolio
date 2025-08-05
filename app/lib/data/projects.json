@@ -1,0 +1,133 @@
+[
+  {
+    "project": "legacybox-cloud",
+    "tools": [
+      "remix",
+      "typescript",
+      "tailwind",
+      "radix ui",
+      "framer motion",
+      "Figma",
+      "RESTful API"
+    ],
+    "year": "2024",
+    "roles": [
+      "Art Director",
+      "Lead Developer",
+      "Head of Digital Product"
+    ],
+    "descriptions": [
+      "Legacybox Cloud is a secure streaming platform that delivers digitized family memories to customers after their analog media is professionally converted by Legacybox. Users can stream, organize, and share the memories trapped on old media from any device while enjoying secure cloud storage and easy download capabilities.",
+      "As lead UI/UX designer, I guided Legacybox Cloud from ideation to launch, creating intuitive experiences for streaming and organizing digitized memories. I then developed the frontend application while collaborating with backend engineers on RESTful API design and data architecture. As Head of Digital Product, I continue building features, maintaining the platform, and scaling the platform up."
+    ],
+    "shortDescription": "A secure streaming platform for digitized family memories with cloud storage and sharing capabilities.",
+    "images": {
+      "featureImage": "https://advisory-indigo-jackal.myfilebase.com/ipfs/QmcWL2XHQt619cW5cHUCyKbaQ4SYcHX5A2PWzR4zYbzrFd",
+      "heroImage": "",
+      "secondaryImages": []
+    },
+    "cardSettings": {
+      "ratio": "1/1",
+      "col": 2,
+      "span": 5,
+      "textColor": "text-primary-600"
+    }
+  },
+  {
+    "project": "legacybox-cloud-admin",
+    "tools": [
+      "remix",
+      "AWS Lambda",
+      "AWS state machines",
+      "RDS & Aurora",
+      "mysql",
+      "drizzle orm",
+      "tailwindcss",
+      "radix-ui"
+    ],
+    "year": "2025",
+    "roles": [
+      "UI/UX designer",
+      "Lead Developer",
+      "Head of Digital Product"
+    ],
+    "descriptions": [
+      "The Legacybox Cloud Admin Dashboard is a comprehensive customer service tool that enables support teams to efficiently manage customer accounts and resolve issues. The platform allows agents to modify user details, trigger system events, monitor order progress, manage digital assets, and provide complete account oversight for seamless customer support operations.",
+      "I conceptualized and designed the dashboard interface to streamline customer service workflows, then developed the full application with complex backend integrations. The system connects to multiple databases including DynamoDB and AWS S3, integrates with a global event bus for real-time operations, and provides comprehensive file management across user accounts."
+    ],
+    "shortDescription": "A comprehensive customer service dashboard for managing user accounts, orders, and digital assets.",
+    "images": {
+      "featureImage": "https://advisory-indigo-jackal.myfilebase.com/ipfs/QmbmbKWp7JvXDhL69EMcLp8cnDTpfQFYR9CfLRevnxTuX5",
+      "heroImage": "",
+      "secondaryImages": []
+    },
+    "cardSettings": {
+      "ratio": "4/6",
+      "col": 7,
+      "span": 5,
+      "textColor": "text-primary-600"
+    }
+  },
+  {
+    "project": "legacybox-rebrand",
+    "tools": [
+      "Illustrator",
+      "photoshop",
+      "blender",
+      "figma",
+      "liquid"
+    ],
+    "year": "2023 - 2024",
+    "roles": [
+      "Art Director",
+      "Frontend Developer"
+    ],
+    "descriptions": [
+      "The Legacybox Rebrand was a comprehensive brand modernization initiative designed to refresh the company's outdated visual identity across all customer touchpoints. The project encompassed new packaging design, updated photography direction, and website redesign to create a cohesive, contemporary brand experience that better reflects Legacybox's premium digitization services.",
+      "As Art Director, I led the complete rebrand from concept to implementation, designing new packaging systems and managing vendor relationships for print production. I directed the brand photoshoot to establish new visual standards and have been systematically redesigning website sections to align with the modernized brand aesthetic and improve user experience."
+    ],
+    "shortDescription": "A comprehensive brand modernization initiative across packaging, photography, and web design.",
+    "images": {
+      "featureImage": "",
+      "heroImage": "",
+      "secondaryImages": []
+    },
+    "cardSettings": {
+      "ratio": "3/2",
+      "col": 1,
+      "span": 5,
+      "textColor": "text-primary-600"
+    }
+  },
+  {
+    "project": "easy-start-legacybox",
+    "tools": [
+      "AWS state machines",
+      "AWS Lambda",
+      "liquid",
+      "shopify",
+      "mysql"
+    ],
+    "year": "2025",
+    "roles": [
+      "Full-stack developer",
+      "Head of Digital Product"
+    ],
+    "descriptions": [
+      "EasyStart Legacybox is a \"pay-per-item\" digitization service that removes upfront costs by providing customers with free kits, charging only for media items they choose to send in. This flexible pricing model lowers the barrier to entry while integrating seamlessly with Legacybox's existing production workflow and Shopify storefront.",
+      "I developed the complete end-to-end system for EasyStart, building backend production software extensions for booklet generation and order processing, while creating the frontend storefront experience. I implemented automated Shopify webhook integration that triggers the appropriate production state machine workflows, handling the entire technical stack from purchase to fulfillment."
+    ],
+    "shortDescription": "A pay-per-item digitization service with free kits that removes upfront costs for customers.",
+    "images": {
+      "featureImage": "",
+      "heroImage": "",
+      "secondaryImages": []
+    },
+    "cardSettings": {
+      "ratio": "4/5",
+      "col": 9,
+      "span": 4,
+      "textColor": "text-primary-600"
+    }
+  }
+]

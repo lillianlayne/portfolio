@@ -1,11 +1,12 @@
+import { Link } from '@remix-run/react';
 import classNames from 'classnames';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useEffect, useRef } from 'react';
-import settings from '../settings.json';
+import projectData from '~/lib/data/projects.json';
 import { ProjectCard } from './components/ProjectCard';
 
 export const SelectedWorks = () => {
-  const { projects } = settings;
+  const projects = projectData;
 
   const headerRef = useRef<HTMLDivElement>(null);
 
@@ -49,16 +50,17 @@ export const SelectedWorks = () => {
       {/* project cards */}
       <div className='transparent-gradient sticky z-20 grid grid-cols-12 px-4 py-[20vh] xl:px-0'>
         {projects.map((project, idx) => (
-          <div
-            key={project.title}
+          <Link
+            to={`/projects/${project.project}`}
+            key={project.project}
             className={classNames(
-              `col-span-${project.span}`,
+              `col-span-${project.cardSettings.span}`,
               `row-start-${idx + 1}`,
-              `col-start-${project.col}`,
+              `col-start-${project.cardSettings.col}`,
             )}
           >
             <ProjectCard {...project} />
-          </div>
+          </Link>
         ))}
       </div>
     </div>
