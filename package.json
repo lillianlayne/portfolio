@@ -11,7 +11,7 @@
     "typecheck": "tsc",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "create": "node createComps.cjs"
+    "create": "node ./workers/createComps.cjs"
   },
   "dependencies": {
     "@remix-run/node": "^2.16.8",

@@ -8,12 +8,32 @@ const getDir = (args) => {
   const dirIdx = args.indexOf('-d');
   let newFolder = 'folder';
 
-  if (dirIdx !== -1 && dirIdx + 1 < args.length) {
-    directory = root + args[dirIdx + 1];
-    newFolder = args[dirIdx + 2];
-  } else {
+  if (dirIdx === -1 && dirIdx + 1 > args.length) {
     console.log('missing directory');
     process.exit(1);
+  }
+
+  const basePath = args[dirIdx + 1];
+  directory = root + basePath;
+  newFolder = args[dirIdx + 2];
+
+  const splitPath = basePath.split('/');
+  if (splitPath.length > 1) {
+    const pathParts = basePath.split('/').filter((part) => part !== '');
+    if (pathParts.length > 1) {
+      const parentPath = path.join(root, pathParts[0]);
+      const parentIndexPath = path.join(parentPath, 'index.ts');
+
+      if (fs.existsSync(parentIndexPath)) {
+        const exportLine = `export * from './${pathParts[1]}';`;
+        const existingContent = fs.readFileSync(parentIndexPath, 'utf8');
+
+        if (!existingContent.includes(exportLine)) {
+          fs.appendFileSync(parentIndexPath, `\n${exportLine}`);
+          console.log('✅ Added export to parent index.ts: ', parentIndexPath);
+        }
+      }
+    }
   }
 
   return { directory, newFolder };
