@@ -65,4 +65,19 @@ body {
       transparent 90%
     );
   }
+
+  .fw-text-sans {
+    font-size: clamp(8rem, 22vw, 32rem);
+    line-height: 60%;
+    letter-spacing: -1rem;
+  }
+  .fw-text-serif {
+    font-size: clamp(2rem, 17vw, 45rem);
+    line-height: 60%;
+    letter-spacing: -0.5rem;
+  }
+
+  .subhead {
+    @apply pb-1 font-serif text-lg font-thin capitalize tracking-wider text-primary-200;
+  }
 }

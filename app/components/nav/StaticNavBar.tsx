@@ -41,31 +41,33 @@ export const StaticNavBar = ({
   };
 
   return (
-    <div className='sticky top-0 z-50 mx-auto grid w-full max-w-screen-xl grid-cols-3 gap-y-4 py-4'>
+    <div className='container fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-full bg-white/15 !p-0 backdrop-blur-md'>
       {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
-      <div
-        className='col-span-1 row-start-1 w-full'
-        style={{
-          gridColumnStart: logo[layout].gridColumnStart,
-          justifySelf: logo[layout].justifySelf,
-          gridColumn: logo[layout].gridColumn,
-          gridRowStart: logo[layout].gridRowStart,
-          width: logo[layout].width,
-        }}
-      >
-        <Logo />
-      </div>
-      <div
-        className='col-span-1 row-start-1'
-        style={{
-          gridColumnStart: toggle[layout].gridColumnStart,
-          justifySelf: toggle[layout].justifySelf,
-        }}
-      >
-        <ThemeToggle theme={theme} setTheme={setTheme} />
-      </div>
-      <div className='col-span-1 col-start-3 row-start-1 justify-self-end'>
-        <Links />
+      <div className='grid w-full grid-cols-3 rounded-full bg-black/10 px-8 py-4'>
+        <div
+          className='col-span-1 row-start-1 w-full'
+          style={{
+            gridColumnStart: logo[layout].gridColumnStart,
+            justifySelf: logo[layout].justifySelf,
+            gridColumn: logo[layout].gridColumn,
+            gridRowStart: logo[layout].gridRowStart,
+            width: logo[layout].width,
+          }}
+        >
+          <Logo />
+        </div>
+        <div
+          className='col-span-1 row-start-1'
+          style={{
+            gridColumnStart: toggle[layout].gridColumnStart,
+            justifySelf: toggle[layout].justifySelf,
+          }}
+        >
+          <ThemeToggle theme={theme} setTheme={setTheme} />
+        </div>
+        <div className='col-span-1 col-start-3 row-start-1 justify-self-end'>
+          <Links />
+        </div>
       </div>
     </div>
   );
