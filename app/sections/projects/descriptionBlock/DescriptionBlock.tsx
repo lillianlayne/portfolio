@@ -15,7 +15,10 @@ export const DescriptionBlock = ({
           <p className='subhead'>tools</p>
           <div className='flex flex-wrap gap-2'>
             {tools.map((tool) => (
-              <div className='rounded-full border border-primary-200 px-3 py-1 text-center text-sm uppercase leading-snug tracking-widest text-primary-100'>
+              <div
+                key={tool}
+                className='rounded-full border border-primary-200 px-3 py-1 text-center text-sm uppercase leading-snug tracking-widest text-primary-100'
+              >
                 {tool}
               </div>
             ))}

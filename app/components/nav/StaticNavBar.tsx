@@ -1,3 +1,4 @@
+import { Link } from '@remix-run/react';
 import { useState } from 'react';
 import { Links } from './components/Links';
 import { Logo } from './components/Logo';
@@ -44,7 +45,8 @@ export const StaticNavBar = ({
     <div className='container fixed left-1/2 top-4 z-50 -translate-x-1/2 rounded-full bg-white/15 !p-0 backdrop-blur-md'>
       {/* <div className='pointer-events-none absolute left-1/2 z-10 h-20 w-screen -translate-x-1/2 bg-gradient-to-b from-primary-600 via-primary-600 to-transparent'></div> */}
       <div className='grid w-full grid-cols-3 rounded-full bg-black/10 px-8 py-4'>
-        <div
+        <Link
+          to={'/'}
           className='col-span-1 row-start-1 w-full'
           style={{
             gridColumnStart: logo[layout].gridColumnStart,
@@ -55,7 +57,7 @@ export const StaticNavBar = ({
           }}
         >
           <Logo />
-        </div>
+        </Link>
         <div
           className='col-span-1 row-start-1'
           style={{
